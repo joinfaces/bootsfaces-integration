@@ -1,0 +1,41 @@
+<ui:composition template="/WEB-INF/templates/base.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:bf="http://bootsfaces.net/ui"
+                xmlns:b="http://butterfaces.larmic.de/components"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+
+        <h:form styleClass="container" style="padding-top: 20px">
+
+            <div class="alert alert-success">
+                Testing PrimeFaces and ButterFaces integration. Using b:labeledContainer with p:spinner.
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <b:labeledContainer label="input">
+                        <bf:inputText placeholder="Type something here..." value="#{demo.text}">
+                            <f:ajax event="keyup" render="ajaxSpinnerValue" />
+                        </bf:inputText>
+                    </b:labeledContainer>
+
+                    <b:labeledContainer label="output">
+                        <h:outputText id="ajaxSpinnerValue" value="#{demo.text}"/>
+                    </b:labeledContainer>
+                </div>
+                <div class="col-md-6">
+                    <bf:button value="Hover over me" tooltip="What a nice tooltip!" tooltip-position="auto"/>
+                </div>
+            </div>
+
+        </h:form>
+
+        <b:waitingPanel />
+
+        <b:activateLibraries/>
+
+    </ui:define>
+
+</ui:composition>
