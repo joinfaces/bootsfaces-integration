@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <b:labeledContainer label="input">
+                    <b:labeledContainer label="bootsfaces">
                         <bf:inputText placeholder="Type something here..." value="#{demo.text}">
                             <f:ajax event="keyup" render="ajaxSpinnerValue" />
                         </bf:inputText>
@@ -29,6 +29,26 @@
                     <bf:button value="Hover over me" tooltip="What a nice tooltip!" tooltip-position="auto"/>
                 </div>
             </div>
+
+            <button id="j_idt121" name="j_idt121" type="button" class="btn btn-lg btn-success" onclick="$('.modalPseudoClass').modal();return false;">Trigger (JavaScript)</button>
+
+            <bf:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+                <p>Modal body</p>
+                <f:facet name="footer">
+                    <bf:button value="close" dismiss="modal" onclick="return false;"/>
+                    <bf:button value="Ok" look="primary" dismiss="modal" onclick="return false;"/>
+                </f:facet>
+            </bf:modal>
+
+            <b:tags label="butterfaces"
+                    value="#{demo.text}"
+                    distinct="true"
+                    confirmKeys=""
+                    placeholder="Enter text...">
+                <b:tooltip>
+                    tooltip
+                </b:tooltip>
+            </b:tags>
 
             <a id="btn" class="btn btn-default">hover me!</a>
             <b:tooltip id="input"
@@ -48,8 +68,6 @@
         </h:form>
 
         <b:waitingPanel />
-
-        <b:activateLibraries/>
 
     </ui:define>
 
