@@ -9,7 +9,7 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Demo implements Serializable {
 
-    private int slider;
+    private String tags;
     private String text;
 
     public String getText() {
@@ -20,11 +20,11 @@ public class Demo implements Serializable {
         this.text = text;
     }
 
-    public int getSlider() {
-        return slider;
+    public String getTags() {
+        return tags;
     }
 
-    public void setSlider(int slider) {
-        this.slider = slider;
+    public void setTags(String tags) {
+        this.tags = tags;
     }
 }

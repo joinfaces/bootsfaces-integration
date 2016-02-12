@@ -13,63 +13,97 @@
                 Testing BootsFaces and ButterFaces integration. Using b:labeledContainer with bf:inputText and bf:button (tooltip).
             </div>
 
+            <b:section label="Tooltips">
+                <div class="row">
+                    <div class="col-md-6">
+                        <bf:button value="Hover BootsFaces" tooltip="What a nice tooltip!" tooltip-position="auto"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a id="btn" class="btn btn-default">Hover ButterFaces</a>
+                        <b:tooltip id="input"
+                                   for="#btn"
+                                   title="custom title"
+                                   trigger="hover"
+                                   viewport="body"
+                                   rendered="true">
+                            <strong>some text stuff</strong>
+                            <br/>
+                            <h:panelGroup>
+                                Lorem ipsum dolor sit amet, consectetuer ...
+                            </h:panelGroup>
+                        </b:tooltip>
+                    </div>
+                </div>
+            </b:section>
+
+            <b:section label="Modal panels">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn btn-default"
+                                onclick="$('.modalPseudoClass').modal();return false;">BootsFaces modal panel
+                        </button>
+
+                        <bf:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+                            <p>Modal body</p>
+                            <f:facet name="footer">
+                                <bf:button value="close" dismiss="modal" onclick="return false;"/>
+                                <bf:button value="Ok" look="primary" dismiss="modal" onclick="return false;"/>
+                            </f:facet>
+                        </bf:modal>
+                    </div>
+                    <div class="col-md-6">
+                        <b:modalPanel id="modalPanel"
+                                      title="Demo title">
+                            Lorem ipsum dolor sit amet, consectetuer ...
+                        </b:modalPanel>
+
+                        <span onClick="butter.modal.open('modalPanel');"
+                              class="btn btn-default">
+                            ButterFaces modal panel
+                        </span>
+                    </div>
+                </div>
+            </b:section>
+
+            <b:section label="Input with ajax">
+                <div class="row">
+                    <div class="col-md-6">
+                        <b:labeledContainer label="bootsfaces">
+                            <bf:inputText placeholder="Type something here..." value="#{demo.text}">
+                                <f:ajax event="keyup" render="bootsfacesoutput"/>
+                            </bf:inputText>
+                        </b:labeledContainer>
+                    </div>
+                    <div class="col-md-6">
+                        <b:labeledContainer label="output">
+                            <h:outputText id="bootsfacesoutput" value="#{demo.text}"/>
+                        </b:labeledContainer>
+                    </div>
+                </div>
+            </b:section>
+
             <div class="row">
                 <div class="col-md-6">
-                    <b:labeledContainer label="bootsfaces">
-                        <bf:inputText placeholder="Type something here..." value="#{demo.text}">
-                            <f:ajax event="keyup" render="ajaxSpinnerValue" />
-                        </bf:inputText>
-                    </b:labeledContainer>
-
-                    <b:labeledContainer label="output">
-                        <h:outputText id="ajaxSpinnerValue" value="#{demo.text}"/>
-                    </b:labeledContainer>
+                    <b:tags label="butterfaces"
+                            value="#{demo.tags}"
+                            distinct="true"
+                            placeholder="Enter text...">
+                        <f:ajax event="change" render="butterfacesoutput"/>
+                        <b:tooltip>
+                            tooltip
+                        </b:tooltip>
+                    </b:tags>
                 </div>
                 <div class="col-md-6">
-                    <bf:button value="Hover over me" tooltip="What a nice tooltip!" tooltip-position="auto"/>
+                    <b:labeledContainer label="output">
+                        <h:outputText id="butterfacesoutput" value="#{demo.tags}"/>
+                    </b:labeledContainer>
                 </div>
             </div>
 
-            <button type="button" class="btn btn-lg btn-success" onclick="$('.modalPseudoClass').modal();return false;">Trigger (JavaScript)</button>
-
-            <bf:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
-                <p>Modal body</p>
-                <f:facet name="footer">
-                    <bf:button value="close" dismiss="modal" onclick="return false;"/>
-                    <bf:button value="Ok" look="primary" dismiss="modal" onclick="return false;"/>
-                </f:facet>
-            </bf:modal>
-
-            <bf:slider min="0" max="24" span="7" value="#{demo.slider}" label="HH"/>
-
-            <b:tags label="butterfaces"
-                    value="#{demo.text}"
-                    distinct="true"
-                    confirmKeys=""
-                    placeholder="Enter text...">
-                <b:tooltip>
-                    tooltip
-                </b:tooltip>
-            </b:tags>
-
-            <a id="btn" class="btn btn-default">hover me!</a>
-            <b:tooltip id="input"
-                       for="#btn"
-                       title="custom title"
-                       trigger="hover"
-                       placement="null"
-                       viewport="body"
-                       rendered="true">
-                <strong>some text stuff</strong>
-                <br />
-                <h:panelGroup>
-                    Lorem ipsum dolor sit amet, consectetuer ...
-                </h:panelGroup>
-            </b:tooltip>
-
         </h:form>
 
-        <b:waitingPanel />
+        <b:waitingPanel/>
 
     </ui:define>
 
