@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <button id="j_idt121" name="j_idt121" type="button" class="btn btn-lg btn-success" onclick="$('.modalPseudoClass').modal();return false;">Trigger (JavaScript)</button>
+            <button type="button" class="btn btn-lg btn-success" onclick="$('.modalPseudoClass').modal();return false;">Trigger (JavaScript)</button>
 
             <bf:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
                 <p>Modal body</p>
@@ -39,6 +39,8 @@
                     <bf:button value="Ok" look="primary" dismiss="modal" onclick="return false;"/>
                 </f:facet>
             </bf:modal>
+
+            <bf:slider min="0" max="24" span="7" value="#{demo.slider}" label="HH"/>
 
             <b:tags label="butterfaces"
                     value="#{demo.text}"
