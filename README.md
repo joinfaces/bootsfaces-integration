@@ -15,7 +15,8 @@ Disable jQuery in BootsFaces and most thinks will work
 ```
 
 ## Start showcase
-```maven clean package wildfly-swarm:run
+```
+maven clean package wildfly-swarm:run
 ```
 
 ## Known problems
