@@ -10,8 +10,12 @@ Disable jQuery in BootsFaces and most thinks will work
 ```xml
 <context-param>
     <param-name>net.bootsfaces.get_jquery_from_cdn</param-name>
-    <param-value>false</param-value>
+    <param-value>true</param-value>
 </context-param>
+```
+
+## Start showcase
+```maven clean package wildfly-swarm:run
 ```
 
 ## Known problems
