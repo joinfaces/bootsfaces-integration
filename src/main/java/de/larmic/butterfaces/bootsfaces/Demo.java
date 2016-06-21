@@ -11,6 +11,7 @@ public class Demo implements Serializable {
 
     private String tags;
     private String text;
+    private String brand;
 
     public String getText() {
         return text;
@@ -26,5 +27,13 @@ public class Demo implements Serializable {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }

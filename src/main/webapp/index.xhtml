@@ -88,7 +88,7 @@
                             value="#{demo.tags}"
                             distinct="true"
                             placeholder="Enter text...">
-                        <f:ajax event="change" render="butterfacesoutput"/>
+                        <f:ajax event="keyup" render="butterfacesoutput"/>
                         <b:tooltip>
                             tooltip
                         </b:tooltip>
@@ -102,7 +102,7 @@
             </div>
 
             <b:section label="Some BootsFaces stuff">
-                <bf:selectOneMenu value="#{selectOneMenuBean.brand}" id="brandID">
+                <bf:selectOneMenu value="#{demo.brand}" id="brandID">
                     <f:selectItem itemLabel="Fiat" itemValue="1"/>
                     <f:selectItem itemLabel="Honda" itemValue="2"/>
                     <f:selectItem itemLabel="Opel" itemValue="3"/>
