@@ -101,6 +101,24 @@
                 </div>
             </div>
 
+            <b:section label="Some BootsFaces stuff">
+                <bf:selectOneMenu value="#{selectOneMenuBean.brand}" id="brandID">
+                    <f:selectItem itemLabel="Fiat" itemValue="1"/>
+                    <f:selectItem itemLabel="Honda" itemValue="2"/>
+                    <f:selectItem itemLabel="Opel" itemValue="3"/>
+                </bf:selectOneMenu>
+
+                <bf:dropButton value="Default">
+                    <bf:navLink value="Action" href="#"></bf:navLink>
+                    <bf:navLink value="Another action" href="#"></bf:navLink>
+                    <bf:navLink value="Something else here" href="#"></bf:navLink>
+                    <bf:navLink></bf:navLink>
+                    <bf:navLink header="Nav header"></bf:navLink>
+                    <bf:navLink value="Separated link" href="#"></bf:navLink>
+                    <bf:navLink value="One more separated link" href="#"></bf:navLink>
+                </bf:dropButton>
+            </b:section>
+
         </h:form>
 
         <b:waitingPanel/>
