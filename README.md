@@ -16,7 +16,7 @@ Disable jQuery in BootsFaces and most thinks will work
 
 ## Start showcase
 ```
-mvn clean package tomee:run
+mvn clean package wildfly-swarm:run
 ```
 
 ## Known problems
