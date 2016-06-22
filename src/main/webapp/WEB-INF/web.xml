@@ -28,6 +28,10 @@
         <param-value>true</param-value>
     </context-param>
     <context-param>
+        <param-name>net.bootsfaces.get_bootstrap_from_cdn</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
         <param-name>de.larmic.butterfaces.provideJQuery</param-name>
         <param-value>true</param-value>
     </context-param>
