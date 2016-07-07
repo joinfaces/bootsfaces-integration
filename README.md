@@ -7,16 +7,16 @@ ButterFaces deliveres css and javascript as first part of html head to allow cus
 
 ## Solution
 Disable jQuery in BootsFaces and most thinks will work
-```xml
-<context-param>
-    <param-name>net.bootsfaces.get_jquery_from_cdn</param-name>
-    <param-value>true</param-value>
-</context-param>
+```yml
+jsf:
+  bootsfaces:
+    get_jquery_from_cdn: yes
+    getBootstrapFromCdn: yes
 ```
 
 ## Start showcase
 ```
-mvn clean package wildfly-swarm:run
+java -jar target/BootsFacesIntegration-1.0-SNAPSHOT.jar
 ```
 
 ## Known problems
