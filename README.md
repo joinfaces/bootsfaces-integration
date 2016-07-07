@@ -11,7 +11,6 @@ Disable jQuery in BootsFaces and most thinks will work
 jsf:
   bootsfaces:
     get_jquery_from_cdn: yes
-    getBootstrapFromCdn: yes
 ```
 
 ## Start showcase
