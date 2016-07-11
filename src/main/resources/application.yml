@@ -3,8 +3,6 @@ server:
 jsf:
   STATE_SAVING_METHOD: client
   PROJECT_STAGE: Production
-#  bootsfaces:
-#    getJqueryFromCdn: true
   butterfaces:
     provideJQuery: true
     provideBootstrap: true
