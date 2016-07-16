@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.github.persapiens</groupId>
         <artifactId>jsf-spring-boot-parent</artifactId>
-        <version>1.7.2</version>
+        <version>1.7.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
