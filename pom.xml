@@ -6,8 +6,8 @@
 
     <parent>
         <groupId>org.joinfaces</groupId>
-        <artifactId>jsf-spring-boot-parent</artifactId>
-        <version>2.4.1</version>
+        <artifactId>joinfaces-parent</artifactId>
+        <version>3.0.0.RC1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -40,12 +40,11 @@
         </dependency>     
         <dependency>
             <groupId>org.joinfaces</groupId>
-            <!-- Change artifactId to jsf-myfaces-butterfaces-spring-boot-starter to use MyFaces instead of Mojarra -->
-            <!-- Change artifactId to jsf-jetty-butterfaces-spring-boot-starter to use Jetty servlet container -->
-            <!-- Change artifactId to jsf-jetty-myfaces-butterfaces-spring-boot-starter to use Jetty servlet container and MyFaces instead of Mojarra-->
-            <!-- Change artifactId to jsf-undertow-butterfaces-spring-boot-starter to use Undertow servlet container -->
-            <!-- Change artifactId to jsf-undertow-myfaces-butterfaces-spring-boot-starter to use Undertow servlet container and MyFaces instead of Mojarra-->
-            <artifactId>jsf-undertow-butterfaces-spring-boot-starter</artifactId>
+            <artifactId>butterfaces-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.joinfaces</groupId>
+            <artifactId>bootsfaces-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 	
